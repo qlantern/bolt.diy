@@ -87,7 +87,13 @@ function chrome129IssuePlugin() {
           if (version === 129) {
             res.setHeader('content-type', 'text/html');
             res.end(
-              '<body><h1>Please use Chrome Canary for testing.</h1><p>Chrome 129 has an issue with JavaScript modules & Vite local development, see <a href="https://github.com/stackblitz/bolt.new/issu[...]
+              `<body>
+                <h1>Please use Chrome Canary for testing.</h1>
+                <p>
+                  Chrome 129 has an issue with JavaScript modules & Vite local development,
+                  see <a href="https://github.com/stackblitz/bolt.new/issues/113">GitHub Issue #113</a>.
+                </p>
+              </body>`
             );
 
             return;
